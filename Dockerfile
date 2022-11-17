@@ -1,4 +1,5 @@
-FROM kyma/docker-nginx
-COPY ./ /var/www
-CMD 'nginx'
+FROM nginx:1.15.8
 
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
